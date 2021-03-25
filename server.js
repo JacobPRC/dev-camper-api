@@ -5,6 +5,7 @@ const colors = require("colors");
 
 const connectDB = require("./config/db");
 const bootcamps = require("./routes/bootcamp");
+const courses = require("./routes/course");
 const errHandler = require("./middleware/error");
 
 dotenv.config({ path: "./config/config.env" });
@@ -23,6 +24,7 @@ console.log(process.env.NODE_ENV);
 
 //Mount routers
 app.use("/api/v1/bootcamps", bootcamps);
+app.use("/api/v1/courses", courses);
 
 // Set up error handler middleware to use in routers
 app.use(errHandler);

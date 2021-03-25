@@ -114,7 +114,7 @@ BootcampSchema.pre("save", async function (next) {
     type: "Point",
     coordinates: [loc[0].longitude, loc[0].latitude],
     formattedAddress: loc[0].formattedAddress,
-    street: loc[0].street,
+    street: loc[0].streetName,
     city: loc[0].city,
     state: loc[0].stateCode,
     zipcode: loc[0].zipcode,
